@@ -3,10 +3,7 @@ package com.example.intentkt
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             finish() // 자기 자신 액티비티를 파괴한다
         }
 
-        findViewById<Button>(R.id.btn_toast).setOnClickListener {
+        findViewById<ImageButton>(R.id.btn_toast).setOnClickListener {
             findViewById<ImageView>(R.id.iv_profile).setImageResource(R.drawable.android2) // 이미지뷰에 새로운 이미지 등록
             Toast.makeText(this, "Clicked!!", Toast.LENGTH_SHORT).show()
         }
